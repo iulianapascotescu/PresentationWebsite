@@ -1,0 +1,136 @@
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage {
+  height: 16%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+/* add font-family */
+.navbar-name {
+  width: 60%;
+  color: black;
+  font-size: 30px;
+  display: flex;
+}
+
+.navbar-name h4 {
+  align-content: flex-start;
+  margin-left: 10%;
+}
+
+/* add font-family */
+.navbar-menu {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+}
+
+.nav-item {
+  margin: auto;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #0050ff;
+}
+
+.main-content {
+  height: 84%;
+  background-color: #e6dace;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (min-width: 1025px) {
+  .main-content {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar-name {
+    width: 45%;
+  }
+  .navbar-menu {
+    width: 55%;
+  }
+  .main-content {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    /* height: 84%; */
+  }
+}
+
+@media (max-width: 768px) and (min-width: 321px) {
+  .homepage {
+    flex-direction: column;
+  }
+  .navbar-name {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-menu {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  body{
+    background-color: #e6dace;
+  }
+}
+
+@media (max-width: 320px) {
+  body{
+    background-color: #e6dace;
+  }
+  .homepage {
+    flex-direction: column;
+  }
+  .navbar-name {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-menu {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
