@@ -133,4 +133,10 @@ a {
     display: flex;
     justify-content: center;
   }
+  .main-content{
+    flex-direction: column;
+  }
+  .nav-item {
+    font-size: small;
+  }
 }

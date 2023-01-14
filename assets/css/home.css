@@ -95,13 +95,13 @@
 }
 
 @media (max-width: 768px) and (min-width: 321px) {
-  .main-content{
+  .main-content {
     padding-top: 0%;
     padding-bottom: 0%;
     padding-left: 0%;
     padding-right: 0%;
     margin: 0;
-    width:100%;
+    width: 100%;
   }
   .portrait-name {
     font-size: 35px;
@@ -120,12 +120,33 @@
     display: flex;
     align-items: center;
     align-self: center;
-    overflow:visible;
+    overflow: visible;
   }
-  h1{
+  h1 {
     margin: 0;
   }
 }
 
 @media (max-width: 320px) {
+  .about-portrait {
+    width: 100%;
+    height: 50%;
+  }
+
+  .about-description {
+    width: 100%;
+    height: 50%;
+  }
+  .hello {
+    font-size: 28px;
+    height: 10%;
+  }
+  .introduction {
+    font-size: 18px;
+    height: 8%;
+  }
+  .description {
+    height: 82%;
+    font-size: 16px;
+  }
 }
