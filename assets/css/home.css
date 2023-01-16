@@ -1,8 +1,21 @@
+h1, h5{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.main-content {
+  background: linear-gradient(to right, #e6dace 40%, #ffffff 40% 100%);
+}
+
 .about-portrait {
+  height: 90%;
+  align-self: center;
   display: flex;
   flex-direction: column;
   width: 50%;
   background-color: #f4ece6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .portrait-div {
@@ -20,24 +33,49 @@
   object-fit: fill;
 }
 
+.portrait-name h4 {
+  margin: 0;
+}
+
 .portrait-name {
   font-size: 40px;
-  height: 30%;
+  height: 15%;
   justify-content: center;
   display: flex;
-  align-items: center;
   text-align: center;
 }
 
+.portrait-name.first {
+  align-items: flex-end;
+}
+
+.portrait-name.second {
+  align-items: flex-start;
+  /* border-bottom: #0050ff solid 2px; */
+}
+
 .portrait-role {
-  height: 30%;
+  height: 18%;
   display: flex;
   justify-content: center;
   font-size: 20px;
   text-align: center;
+  align-items: center;
+}
+
+.external-links {
+  height: 12%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  font-size: 25px;
 }
 
 .about-description {
+  height: 90%;
+  align-self: center;
   width: 50%;
   background-color: white;
   display: flex;
@@ -45,37 +83,43 @@
 }
 
 .hello {
-  height: 35%;
+  height: 30%;
   width: 100%;
   font-size: 100px;
-  margin-left: 2%;
+  margin-left: 5%;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: flex-end;
+}
+
+.introduction h5 {
+  margin: 0;
 }
 
 .introduction {
   height: 10%;
   font-size: 25px;
-  margin: 2%;
+  margin: 5%;
   display: flex;
-  justify-content: center;
   text-align: center;
+  align-items: flex-end;
 }
 
 .description {
-  height: 55%;
-  text-align: center;
+  height: 60%;
   font-size: 18px;
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 @media (min-width: 1025px) {
+
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-  /* .main-content{
-    margin: auto;
-  } */
   .portrait-name {
     font-size: 30px;
   }
@@ -102,6 +146,11 @@
     padding-right: 0%;
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
   }
   .portrait-name {
     font-size: 35px;
@@ -125,17 +174,45 @@
   h1 {
     margin: 0;
   }
+  .about-portrait {
+    width: 100%;
+    height: 100%;
+  }
+  .about-description {
+    width: 100%;
+    margin-top:5%;
+    height: 100%;
+  }
+  .external-links{
+    order: 1;
+  }
+  .portrait-div{
+    order: 2;
+  }
+  .portrait-name.first{
+    order: 3;
+  }
+  .portrait-name.second{
+    order: 4;
+  }
+  .portrait-role{
+    order: 5;
+  }
 }
 
 @media (max-width: 320px) {
+  .main-content{
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+  }
   .about-portrait {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
 
   .about-description {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   .hello {
     font-size: 28px;
@@ -148,5 +225,20 @@
   .description {
     height: 82%;
     font-size: 16px;
+  }
+  .external-links{
+    order: 1;
+  }
+  .portrait-div{
+    order: 2;
+  }
+  .portrait-name.first{
+    order: 3;
+  }
+  .portrait-name.second{
+    order: 4;
+  }
+  .portrait-role{
+    order: 5;
   }
 }
